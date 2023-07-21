@@ -1,95 +1,59 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import { enums_service } from "./enums";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className=" flex flex-col  w-full">
+      <section id="jumbotron">
+        <div className="overlay"></div>
+        <div className="container mx-auto text-white absolute z-50 left-5 w-full grid place-items-center h-screen">
+          <div>
+            <h3 className="text-white text-center text-6xl font-black z-50 xl:text-8xl">
+              Xperience Kanki
+            </h3>
+
+            <h6 className="text-black-60 text-center mt-5">
+              Where Creativity Meets Infinity
+            </h6>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section id="services" className="py-44">
+        <h2 className="uppercase font-extrabold text-5xl mb-20 text-center">
+          Our services
+        </h2>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+        <div className="container mx-auto px-4 flex justify-center">
+          <div className="grid grid-cols-1 gap-14 xl:grid-cols-3">
+            {enums_service.map((data) => (
+              <div
+                className="bg-white rounded-lg p-10 drop-shadow-lg"
+                key={data.title}
+              >
+                <h4 className="capitalize text-3xl font-bold text-black-100">
+                  {data.title}
+                </h4>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+                <h5 className="mt-5 text-black-80">{data.content}</h5>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
+      <section id="projects" className=" py-44">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1  gap-20 xl:grid-cols-2">
+            <div>
+              <h3 className="uppercase font-semibold text-black-100 text-5xl">
+                our projects
+              </h3>
+            </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+            <div className="bg-black-50 w-full h-72 rounded-bl-3xl"></div>
+          </div>
+        </div>
+      </section>
     </main>
-  )
+  );
 }
