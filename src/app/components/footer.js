@@ -20,7 +20,7 @@ const Footer = () => {
             />
           </div>
           {/* <!-- Link container --> */}
-          <div class="flex flex-row justify-center space-x-8">
+          <div class="flex flex-row justify-center space-x-8 text-sm">
             {/* <!-- Link1 --> */}
             <a href="#">
               <Image
@@ -89,7 +89,7 @@ const Footer = () => {
               Careers
             </a>
             <a href="#" class="hover:text-blue-800 text-eggShell">
-              Communityy
+              Community
             </a>
             <a href="#" class="hover:text-blue-800 text-eggShell">
               Privacy policy
@@ -99,19 +99,19 @@ const Footer = () => {
         {/* <!-- Input container --> */}
         <div class="flex flex-col justify-center space-y-12">
           <form>
-            <div class="flex space-x-3">
+            <div class="flex  space-x-3">
               <input
                 type="text"
                 class="flex-1 px-4 rounded-full focus:outline-none"
                 placeholder="Enter your email address"
               />
-              <button class="px-6 py-2  rounded-full text-black-100 bg-white hover:text-white hover:border-2 hover:border-white hover:bg-black-100">
+              <button class="px-6 py-2 block rounded-full text-black-100 bg-white hover:text-white hover:border-2 hover:border-white hover:bg-black-100">
                 Go
               </button>
             </div>
           </form>
-          <div class="hidden text-white md:block">
-            CopyRights &copy; resevered 2023
+          <div class="hidden text-sm text-white md:block">
+            CopyRights&copy; All rights reserverd 2023
           </div>
         </div>
       </div>
