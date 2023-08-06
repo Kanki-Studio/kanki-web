@@ -4,10 +4,7 @@ export const enums_service = [
     content:
       "In the world of gaming, we craft captivating and immersive experiences that transport players to exciting realms of fantasy and adventure. Our game design team meticulously weaves together stunning visuals, engaging gameplay mechanics, and gripping storytelling to bring your dream game to life.",
   },
-  {
-    title: "web development",
-    content: `In the digital landscape, we harness the power of cutting-edge technologies to build stunning and intuitive websites that leave a lasting impression. Whether it's a sleek corporate platform or an interactive e-commerce store, our web development wizards have the expertise to turn your ideas into pixel-perfect reality.`,
-  },
+
   {
     title: "character development",
     content:
